@@ -9,22 +9,43 @@ const Navigation = styled.nav`
   background: rgb(66, 57, 57);
   height: 70px;
 `;
+const Logo = styled.div`
+  color: white;
+  font-size: 3em;
+  text-transform: capitalize;
+  font-weight: bold;
+`;
+const Ul = styled.ul`
+  display: flex;
+  width: 50%;
+  list-style-type: none;
+  justify-content: space-evenly;
+`;
+const Li = styled.li`
+  margin: 0 20px;
+`;
+const Links = styled.a`
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 1.2em;
+`;
 
 const Header = props => {
   return (
     <Navigation>
-      <div className="logo">Find_Ma_Movie</div>
-      <ul>
-        <li>
-          <a href="/">Best Movies</a>
-        </li>
-        <li>
-          <a href="/">Most Popular</a>
-        </li>
-        <li>
-          <a href="/">Latest</a>
-        </li>
-      </ul>
+      <Logo>Fovie</Logo>
+      <Ul>
+        <Li>
+          <Links href="/">Best Movies</Links>
+        </Li>
+        <Li>
+          <Links href="/">Most Popular</Links>
+        </Li>
+        <Li>
+          <Links href="/">Latest</Links>
+        </Li>
+      </Ul>
     </Navigation>
   );
 };
